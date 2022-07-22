@@ -52,3 +52,6 @@ npm i html2canvas
 ====
 Exclamação força o TS a aceitar a seleção passada
 html2canvas(document.querySelector("html")!)
+
+
+DEPLOY = https://nlw-return-impulse-web-peach-psi.vercel.app/
