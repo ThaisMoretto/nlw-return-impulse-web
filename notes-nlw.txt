@@ -1,0 +1,54 @@
+vite = ferramenta que permite que façamos com que nosso navegador entenda o JS mais moderno, ou seja, ele converte o código para um formato em que consigamos utilizar em todos os navegadores.
+
+webpack = utilizado para fazer o processo de bundling (pega o código JS e converte em um único arquivo para que o navegador consiga carregar esse arquivo)
+babel = utilizado para converter um código JS de uma versão mais recente para uma versão que todos os navegadores entendam
+Por padrão, os navegadores não entendiam importação entre arquivos, hoje em dia, eles implementaram a funcionalidade esmodules que permite a importação entre arquivos e elimina a necessidade de utilizar o webpack
+
+Com o vite, não precisamos de webpack e nem de babel, temos tudo em uma única ferramenta só. Ele substitui o babel, faz a mesma coisa que o babel faz mas não precisa substituir o webpack, porque ele faz uso da feature esmodules dos browsers (veja em Can I use esmodules) 
+
+=======
+
+Tailwindcss
+É uma ferramenta de utilitários css, ou seja, várias classes que adicionam estilos nos elementos HTML
+Trás muita produtividade pois, facilita a escrita de css devido as classes utilitária que disponibiliza, que irá substituir a maneira que trabalhamos com css normalmente
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+
+postcss => instala junto a ferramenta postcss, que irá integrar de forma automática junto com o vite e irá, basicamente, ficar observando os arquivos css da app e vai recompilar o css de uma maneira que o browser precise consumir o arquivo
+
+Tailwind é utilizado sempre com classes. Exemplo:
+
+return (
+    <div>
+      <h1 className="text-[#8257e6] p-2 hover:text-lime-700 transition-colors">
+        Hello world
+      </h1>
+
+      <h1
+        className={`text-[${color}] p-2 hover:text-lime-700 transition-colors`}
+      >
+        Hello world again
+      </h1>
+    </div>
+  );
+
+==== 
+
+Acessibilidade: Existem várias bibliotecas React hoje em dia que facilita a acessibilidade
+Exemplo: Reakit/Ariakit, Radix UI, headless UI (criada pelo pessoa do tailwindcss e é altamente integrada com ele)
+
+A headless UI já controla toda a parte de estate, então não precisa, por exemplo, controlar através de estate se o Widget está aberto ou fechado
+
+====
+
+Retorna um vetor
+Object.entries(feerbackTypes) => retorna um vetor de arrays, ou seja, [[chave, valor], ["BUG", {...conteudo}]]
+
+====
+
+npm i html2canvas
+
+====
+Exclamação força o TS a aceitar a seleção passada
+html2canvas(document.querySelector("html")!)
